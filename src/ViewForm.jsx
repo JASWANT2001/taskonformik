@@ -4,11 +4,6 @@ import React, { useEffect, useState } from "react";
 import Form from "./Form";
 
 function ViewForm({ formvalues }) {
-  useEffect(() => {
-    //   let fromValues =[...formDetails.data]
-    console.log(formvalues);
-  }, []);
-
   return (
     <div className="container">
       <table class="table table-bordered">
@@ -25,17 +20,14 @@ function ViewForm({ formvalues }) {
         <tbody>
           {formvalues.map((ele, index) => {
             return (
-              
-                <tr>
-                  <th scope="row">{ele.name}</th>
-                  <td>{ele.email}</td>
-                  <td>{ele.country}</td>
-                  <td>{ele.gridRadios}</td>
-                  <td>{ele.dob}</td>
-                  <td>{ele.message}</td>
-                  
-                </tr>
-              
+              <tr>
+                <th scope="row">{ele.name}</th>
+                <td>{ele.email}</td>
+                <td>{ele.country}</td>
+                <td>{ele.gridRadios}</td>
+                <td>{ele.dob}</td>
+                <td>{ele.message}</td>
+              </tr>
             );
           })}
         </tbody>

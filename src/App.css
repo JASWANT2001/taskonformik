@@ -1,0 +1,22 @@
+.mg {
+    background-color: burlywood;
+    height: 600px;
+    padding: 10px;
+}
+
+.mg1 {
+    background-color: burlywood;
+    padding: 10px;
+}
+
+.container-fluid {
+    height: 750px;
+    /* width: 100%; */
+    padding: 50px;
+    margin-left: 50px;
+    background-color: rgb(224, 195, 156);
+}
+
+.tt {
+    text-align: center;
+}
