@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
+import Form from "./Form";
+import ViewForm from "./ViewForm"
+import { useState } from "react";
 
 function App() {
+  const [formvalues, setFormValues] = useState([])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="row">
+        <h3>Form</h3>
+        <div className="col-lg-6 border border-dark">
+          <Form setFormValues={setFormValues} formvalues={formvalues} />
+        </div>
+        <div className="col-lg-6 border border-dark">
+          <ViewForm formvalues={formvalues} />
+        </div>
+      </div>
     </div>
   );
 }
